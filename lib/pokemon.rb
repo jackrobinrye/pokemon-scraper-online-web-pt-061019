@@ -22,6 +22,12 @@ class Pokemon
     Pokemon.new(id: id, name: name, type: type, db: database)
   end
 
+  def self.find(id, database)
+    sql = <<- 
+    SELECT *
+    FROM pokemon
+    WHERE id = ?
+    SQL 
 
 
 
