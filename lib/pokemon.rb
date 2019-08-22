@@ -18,8 +18,8 @@ class Pokemon
     database.execute(sql, name, type)
 
     sql_2 = "SELECT last_insert_rowid() FROM pokemon"
-    # self.id = database.execute(sql_2)[0][0]
-    binding.pry
+    id = database.execute(sql_2)[0][0]
+    Pokemon.new(id, name, type, database)
   end
 
 
