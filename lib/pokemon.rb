@@ -30,7 +30,7 @@ class Pokemon
     SQL
     row = database.execute(sql, id)
     binding.pry
-  end 
+  end
 
 
 
