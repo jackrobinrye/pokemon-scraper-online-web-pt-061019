@@ -28,7 +28,7 @@ class Pokemon
     FROM pokemon
     WHERE id = ?
     SQL
-    row = database.execute(sql, id)
+    row = database.execute(sql, id)[0]
     binding.pry
   end
 
